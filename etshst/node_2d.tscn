@@ -1,11 +1,21 @@
-[gd_scene load_steps=2 format=3 uid="uid://0au0ds2grbhd"]
+[gd_scene load_steps=3 format=3 uid="uid://0au0ds2grbhd"]
 
 [ext_resource type="PackedScene" uid="uid://car1t1dbffskb" path="res://playerscene.tscn" id="1_wtcfe"]
+[ext_resource type="Texture2D" uid="uid://b0l8xhek25yap" path="res://6s8boirz4fwuaw6duatwkilyc0i9.png" id="2_0e48y"]
 
 [node name="Node2D" type="Node2D"]
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("1_wtcfe")]
-rotation = -0.71343
+position = Vector2(595, 8192)
+rotation = -3.14159
 
 [node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(0.2, 0.2)
+position = Vector2(1184, -1161)
+scale = Vector2(3.92, 3.92)
+zoom = Vector2(0.02, 0.02)
+
+[node name="Track of etshst" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Track of etshst"]
+scale = Vector2(53.829, 53.829)
+texture = ExtResource("2_0e48y")
