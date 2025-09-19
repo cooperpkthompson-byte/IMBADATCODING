@@ -2,7 +2,8 @@
 
 [ext_resource type="PackedScene" uid="uid://car1t1dbffskb" path="res://playerscene.tscn" id="1_wtcfe"]
 [ext_resource type="Texture2D" uid="uid://b0l8xhek25yap" path="res://6s8boirz4fwuaw6duatwkilyc0i9.png" id="2_0e48y"]
-[ext_resource type="Script" uid="uid://c65upnv2soq4t" path="res://camera_2d.gd" id="2_epypp"]
+
+[sub_resource type="GDScript" id="GDScript_0e48y"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -11,11 +12,13 @@ unique_name_in_owner = true
 position = Vector2(595, 8192)
 rotation = -3.14159
 
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(504, 8303)
+[node name="Camera2D" type="Camera2D" parent="Player"]
+position = Vector2(90.9999, -111.001)
+rotation = 3.14159
 scale = Vector2(8.76, 8.76)
 zoom = Vector2(0.3, 0.3)
-script = ExtResource("2_epypp")
+position_smoothing_enabled = true
+script = SubResource("GDScript_0e48y")
 
 [node name="Track of etshst" type="Node2D" parent="."]
 
