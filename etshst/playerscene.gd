@@ -1,5 +1,6 @@
 extends CharacterBody2D
 
+var baseSpeed = 0
 var acceleration = 800
 var deceleration = 800
 const SPEED = 3000.0
@@ -12,14 +13,12 @@ func _process(delta: float) -> void:
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var direction := Input.get_axis("Down", "Up")
 	if direction:
-		var direction2D : Vector2
-		direction2D = direction * SPEED * transform.x
-		velocity.x = move_toward(velocity.x, direction2D.x, acceleration * delta)
-		velocity.y = move_toward(velocity.y, direction2D.y, acceleration * delta)  
+		baseSpeed = move_toward(baseSpeed, direction * SPEED, acceleration * delta )  
 	else: 
-		velocity.x = move_toward(velocity.x, 0, deceleration * delta)
-		velocity.y = move_toward(velocity.y, 0, deceleration * delta)
+		baseSpeed = move_toward(baseSpeed, 0, deceleration * delta ) 
 
 	rotation += rotation_direction * rotation_speed * delta
+	velocity = transform.x * baseSpeed
+	
 	move_and_slide()
 	

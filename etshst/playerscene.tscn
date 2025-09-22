@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://car1t1dbffskb"]
 
-[ext_resource type="Texture2D" uid="uid://ba7hstcno10xe" path="res://simple-travel-car-top_view.png" id="1_8c5dp"]
 [ext_resource type="Script" uid="uid://bh8osutoykarp" path="res://playerscene.gd" id="1_8rhwu"]
+[ext_resource type="Texture2D" uid="uid://ofyarqc6bk76" path="res://Pixel-Ferrari-Top-View-Transparent-PNG.png" id="2_8rhwu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0e48y"]
 size = Vector2(605, 306)
@@ -16,4 +16,5 @@ shape = SubResource("RectangleShape2D_0e48y")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 z_index = 1
-texture = ExtResource("1_8c5dp")
+scale = Vector2(0.608389, 0.608389)
+texture = ExtResource("2_8rhwu")
